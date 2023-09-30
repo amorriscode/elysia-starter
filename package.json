@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@prisma/client": "^5.3.1",
+    "@sinclair/typebox": "^0.31.17",
     "elysia": "latest",
-    "prisma": "^5.3.1"
+    "prisma": "^5.3.1",
+    "typeid-js": "^0.3.0"
   },
   "devDependencies": {
     "bun-types": "latest",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "prisma-typebox-generator": "^2.1.0"
   },
   "module": "src/index.js"
 }
