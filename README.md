@@ -13,7 +13,7 @@
 - 🐘 [Postrges](https://www.postgresql.org/)
 - 🚄 One-click [Railway](https://railway.app/) deploys
 
-## Getting Started
+## 🚀 Getting Started
 
 To get started with this template, ensure that [Bun](https://bun.sh/) is installed.
 
@@ -37,17 +37,17 @@ bun run dev
 
 Open http://localhost:3000/ with your browser to see the result.
 
-## Architecture and Design
+## 🏛️ Architecture and Design
 
-### TypeIDs
+#### TypeIDs
 
-This starter uses TypeIDs which are type-safe, K-sortable, unique identifiers inspired by Stripe IDs. An example ID for a user would be `user_123456`.
+This starter uses [TypeIDs](https://github.com/jetpack-io/typeid-js) which are type-safe, K-sortable, unique identifiers inspired by Stripe IDs. An example ID for a user would be `user_123456`.
 
-## API Resources
+### API Resources
 
 Each API resource (eg. `users`) are defined in `src/resources`. Each resource has a `router.ts` and `service.ts`. All the endpoints for the resource are defined in `router.ts` and all of the business logic ends up in `service.ts`.
 
-## Roadmap
+## 🗺️ Roadmap
 
 - [ ] JWT authentication
 - [ ] Sane HTTP server defaults (CORS, etc.)
