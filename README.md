@@ -1,4 +1,6 @@
-# Elysia with Bun runtime
+# Elysia Starter
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/2TqJzK?referralCode=dlaCKJ)
 
 ## Getting Started
 To get started with this template, simply paste this command into your terminal:
