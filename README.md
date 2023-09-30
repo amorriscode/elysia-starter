@@ -1,9 +1,8 @@
 <div align="center">
   <h1>Elysia Starter</h1>
   <p>A batteries included API started built with <a href="https://elysiajs.com/" target="_blank"><b>ElysiaJS</b></a>.</p>
+  <a href="https://railway.app/template/2TqJzK?referralCode=dlaCKJ" rel="nofollow"><img src="https://camo.githubusercontent.com/081df3dd8cff37aab35044727b02b94a8e948052487a8c6253e190f5940d776d/68747470733a2f2f7261696c7761792e6170702f627574746f6e2e737667" alt="Deploy on Railway" data-canonical-src="https://railway.app/button.svg" style="max-width: 100%;"></a>
 </div>
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/2TqJzK?referralCode=dlaCKJ)
 
 ## 🔋 Batteries Included
 
