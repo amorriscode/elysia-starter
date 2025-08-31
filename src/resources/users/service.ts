@@ -1,17 +1,12 @@
-import { NotFoundError, type Static, t } from "elysia";
+import { eq } from "drizzle-orm";
+import { NotFoundError, t } from "elysia";
 import { typeid } from "typeid-js";
-import { prisma } from "~/db";
-
-export const UserInput = t.Object({
-	email: t.String(),
-	name: t.Optional(t.String()),
-});
-type UserInputType = Static<typeof UserInput>;
+import { db, type UserInsert, users } from "~/db";
 
 export async function getUser(id: string) {
 	try {
-		const user = await prisma.user.findUnique({
-			where: { id },
+		const user = await db.query.users.findFirst({
+			where: eq(users.id, id),
 		});
 
 		if (!user) {
@@ -24,11 +19,9 @@ export async function getUser(id: string) {
 	}
 }
 
-export async function createUser(args: UserInputType) {
-	return prisma.user.create({
-		data: {
-			id: typeid("user").toString(),
-			...args,
-		},
+export async function createUser(args: UserInsert) {
+	return db.insert(users).values({
+		id: typeid("user").toString(),
+		...args,
 	});
 }

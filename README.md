@@ -9,9 +9,9 @@
 - 🥟 [Bun](https://bun.sh/)
 - 👮 [TypeScript](https://www.typescriptlang.org/)
 - 🦊 [ElysiaJS](https://elysiajs.com/)
-- 🧰 [Prisma](https://prisma.io/)
+- ⚡ [Drizzle](https://orm.drizzle.team/)
 - 🐘 [Postrges](https://www.postgresql.org/)
-- 🚄 One-click [Railway](https://railway.app/) deploys
+- 🚄 [Railway](https://railway.app/)
 
 ## 🚀 Getting Started
 
@@ -51,7 +51,7 @@ Each API resource (eg. `users`) are defined in `src/resources`. Each resource ha
 
 - [ ] JWT authentication
 - [ ] Sane HTTP server defaults (CORS, etc.)
-- [ ] Better interop between Prisma and typebox
 - [ ] Example tests
 - [ ] Docker support
 - [ ] Monorepo with Next.js
+- [ ] Code generation
