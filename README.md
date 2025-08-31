@@ -8,7 +8,7 @@
 
 - 🥟 [Bun](https://bun.sh/)
 - 👮 [TypeScript](https://www.typescriptlang.org/)
-- 🦊 [ElysiaJS](https://elysiajs.com/)
+- 🦊 [Elysia](https://elysiajs.com/)
 - ⚡ [Drizzle](https://orm.drizzle.team/)
 - 🐘 [Postrges](https://www.postgresql.org/)
 - 🚄 [Railway](https://railway.app/)
@@ -37,7 +37,7 @@ bun run dev
 
 Open http://localhost:3000/ with your browser to see the result.
 
-## 🏛️ Architecture and Design
+## 🏛️ Architecture
 
 ### TypeIDs
 
@@ -47,11 +47,16 @@ This starter uses [TypeIDs](https://github.com/jetpack-io/typeid-js) which are t
 
 Each API resource (eg. `users`) are defined in `src/resources`. Each resource has a `router.ts` and `service.ts`. All the endpoints for the resource are defined in `router.ts` and all of the business logic ends up in `service.ts`.
 
+### Deployment
+
+[This template](https://railway.com/deploy/2TqJzK) is meant to be deployed with [Railway](https://railway.app/). When deploying the template, use `DATABASE_URL=${{Postgres.DATABASE_URL}}` to configure the API to connect to the Postgres instance that comes with your deployment.
+
 ## 🗺️ Roadmap
 
 - [ ] JWT authentication
 - [ ] Sane HTTP server defaults (CORS, etc.)
 - [ ] Example tests
 - [ ] Docker support
-- [ ] Monorepo with Next.js
+- [ ] Monorepo with Next.js or Tanstack
 - [ ] Code generation
+- [ ] Logging

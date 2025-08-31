@@ -1,27 +1,26 @@
 import { eq } from "drizzle-orm";
-import { NotFoundError, t } from "elysia";
 import { typeid } from "typeid-js";
 import { db, type UserInsert, users } from "~/db";
 
-export async function getUser(id: string) {
-	try {
-		const user = await db.query.users.findFirst({
-			where: eq(users.id, id),
-		});
+export async function getUserOrThrow(id: string) {
+	const user = await db.query.users.findFirst({
+		where: eq(users.id, id),
+	});
 
-		if (!user) {
-			throw new NotFoundError("User not found");
-		}
-
-		return user;
-	} catch (error) {
-		console.error("Error finding user:", error);
+	if (!user) {
+		throw new Error("User not found");
 	}
+
+	return user;
 }
 
 export async function createUser(args: UserInsert) {
-	return db.insert(users).values({
-		id: typeid("user").toString(),
-		...args,
-	});
+	return db
+		.insert(users)
+		.values({
+			id: typeid("user").toString(),
+			...args,
+		})
+		.returning()
+		.then(([user]) => user);
 }
